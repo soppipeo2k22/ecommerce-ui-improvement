@@ -38,3 +38,22 @@
 
 * Hiểu cách đặt câu lệnh (Prompt) đóng vai chuyên gia phân tích nghiệp vụ (BA/UX) và yêu cầu AI tách bạch rõ giữa **quan sát thực tế** với **đề xuất suy đoán**.
 * Nắm được quy trình kiểm chứng chéo kết quả của AI trên website thật trước khi đưa vào báo cáo, không sao chép thụ động các tính năng chưa được kiểm chứng.
+---
+
+## 7. Nhật ký sử dụng AI cho thiết kế & lập trình giao diện (Nhiệm vụ 3)
+
+### Prompt Lần 2: Đề xuất phương án thiết kế giao diện (Bước 5.2)
+> Tôi đang thực hiện bài tập phát triển giao diện website thương mại điện tử bằng HTML5 và CSS3. Tôi muốn cải tiến khu vực: Danh sách & Thẻ sản phẩm (Product Card) cho website đặt tiệc văn phòng (tiecvanphong.com). Đối tượng sử dụng: khách hàng mua sắm trực tuyến tại Việt Nam. Hãy đề xuất: 1. Bố cục giao diện. 2. Các thành phần HTML cần sử dụng. 3. Cách tổ chức CSS. 4. Cách hiển thị trên máy tính và điện thoại. 5. Những điểm cần kiểm tra về khả năng sử dụng. Trước tiên, hãy giải thích phương án thiết kế. Chưa tạo toàn bộ mã nguồn cho đến khi tôi yêu cầu.
+
+- **Kết quả AI đề xuất:** Chia lưới 4 cột bằng CSS Grid trên màn hình máy tính, tự động chuyển về 2 cột trên máy tính bảng và 1 cột trên điện thoại; dùng Flexbox bên trong từng thẻ để đẩy nút hành động xuống đáy thẻ đồng đều; gắn badge tỷ lệ giảm giá và số lượng khẩu phần ăn ngay trên ảnh sản phẩm.
+
+### Prompt Lần 3: Tạo mã nguồn HTML5 & CSS3 (Bước 5.3)
+> Hãy tạo mã nguồn HTML5 và CSS3 cho khu vực Danh sách & Thẻ sản phẩm đã thống nhất ở trên. Yêu cầu: đặt cấu trúc trong index.html, định dạng trong style.css, dùng CSS Grid và Flexbox, hiển thị tốt trên cả máy tính và điện thoại, chỉ dùng HTML5 và CSS3 thuần, không dùng thư viện ngoài hay JavaScript.
+
+### Tự kiểm tra và chỉnh sửa thủ công (Bước 5.4)
+- **Kiểm tra hiển thị thực tế:** Mở file `index.html` trên trình duyệt Chrome và kiểm tra chế độ Responsive bằng DevTools để xác nhận bố cục tự chuyển thành 1 cột dọc trên điện thoại, hình ảnh giữ đúng tỷ lệ với thuộc tính `object-fit: cover`.
+- **Tự chỉnh sửa thủ công:** Sửa màu nền nút `.btn-add-cart` trong file `css/style.css` từ màu cam (`#e67e22`) sang màu xanh lá (`#27ae60`) để tạo độ tương phản rõ ràng với phần giá khuyến mãi màu cam phía trên, giúp nút kêu gọi hành động *"Thêm vào giỏ tiệc"* nổi bật và dễ nhận diện hơn.
+
+### Kiến thức HTML5/CSS3 nắm vững sau khi thực hiện
+- Biết cách tổ chức cấu trúc trang bằng các thẻ HTML5 ngữ nghĩa (`<header>`, `<main>`, `<section>`, `<article>`).
+- Hiểu cách kết hợp **CSS Grid** (`grid-template-columns`) để chia cột lưới sản phẩm, **Flexbox** để căn chỉnh nội dung bên trong thẻ và **Media Queries** (`@media`) để tối ưu giao diện trên cả máy tính lẫn điện thoại.
